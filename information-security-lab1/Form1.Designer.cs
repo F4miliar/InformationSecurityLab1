@@ -47,6 +47,8 @@
             numericUpDownYinf = new NumericUpDown();
             numericUpDownPokn1 = new NumericUpDown();
             numericUpDownPokn2 = new NumericUpDown();
+            label1 = new Label();
+            labelResult = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownYzab).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownXzab).BeginInit();
@@ -248,12 +250,38 @@
             numericUpDownPokn2.Value = new decimal(new int[] { 5, 0, 0, 65536 });
             numericUpDownPokn2.Leave += numericUpDownYzab_Leave;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.ForeColor = SystemColors.ControlText;
+            label1.Location = new Point(25, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(158, 15);
+            label1.TabIndex = 29;
+            label1.Text = "Результат проникновения";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // labelResult
+            // 
+            labelResult.AutoSize = true;
+            labelResult.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            labelResult.ForeColor = SystemColors.ControlText;
+            labelResult.Location = new Point(189, 7);
+            labelResult.Name = "labelResult";
+            labelResult.Size = new Size(32, 21);
+            labelResult.TabIndex = 30;
+            labelResult.Text = "0.0";
+            labelResult.TextAlign = ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(632, 572);
+            Controls.Add(labelResult);
+            Controls.Add(label1);
             Controls.Add(numericUpDownPokn2);
             Controls.Add(numericUpDownPokn1);
             Controls.Add(numericUpDownYinf);
@@ -275,7 +303,6 @@
             Controls.Add(labelYzab);
             Name = "Form1";
             Text = "Lab1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownYzab).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownXzab).EndInit();
@@ -320,5 +347,7 @@
         private NumericUpDown numericUpDownYinf;
         private NumericUpDown numericUpDownPokn1;
         private NumericUpDown numericUpDownPokn2;
+        private Label label1;
+        private Label labelResult;
     }
 }
